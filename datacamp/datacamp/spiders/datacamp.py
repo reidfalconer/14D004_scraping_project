@@ -32,9 +32,6 @@ class DatacampSpider(Spider):
             'Course Author Occupation': course_author_occupation,
             'Course URL': course_url,
             }
-    def close(self, reason):
-        csv_file = max(glob.iglob('*.csv'), key=os.path.getctime)
-        os.rename(csv_file, 'datacamp.csv')
 
     
 

@@ -31,15 +31,6 @@ class JobsinbarcelonaSpider(scrapy.Spider):
         absolute_next_page_url = response.urljoin(next_page_url)
         yield scrapy.Request(absolute_next_page_url)
 
-    def close(self, reason):
-        csv_file = max(glob.iglob('*.csv'), key=os.path.getctime)
-        os.rename(csv_file, 'jobsinbarcelona.csv')
-            
-
-      
-
-
-
 
 
 
