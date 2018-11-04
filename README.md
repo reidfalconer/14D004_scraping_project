@@ -2,46 +2,46 @@
 
 ## Project Description
 
-The data and code in this repository allows users to scrape all the avalible courses on [datacamp.com](https://www.datacamp.com/courses) and scape all job posts on [jobsinbarcelona.es](http://jobsinbarcelona.es/) using [scrapy](https://scrapy.org/) an open source and collaborative framework for extracting the data you need from websites.
+The data and code in this repository allows users to scrape all the available courses on [datacamp.com](https://www.datacamp.com/courses) and scape all job posts on [jobsinbarcelona.es](http://jobsinbarcelona.es/) using [scrapy](https://scrapy.org/) an open source and collaborative framework for extracting the data you need from websites.
 
-- Code was written Python 3.6 and Scrapy 1.5.1
+- The code was written Python 3.6 and Scrapy 1.5.1
 
 ### **[Datacamp](https://www.datacamp.com/courses):** 
-On the datacamp course page itself, you can search for courses of interest or browse by technology. 
+On the datacamp course page itself, you can search for courses of interest or browse all the courses by technology. 
 <p align="center">
   <img src="./img/datacamp_1.png" alt="browse_by_tech"
-       width="500" height="330">
+       width="480" height="330">
 </p>
 
-the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url. 
+The `datacamp.py` script extracts all of the course titles within these six technologies, along with their course description, author, authors occupation and URL. 
 
 <p align="center">
   <img src="./img/datacamp_2.png" alt="browse_by_tech"
-       width="500" height="350">
+       width="500" height="280">
 </p>
 
 ### **[Jobs in barcelona](http://jobsinbarcelona.es/):** 
-Jobs in Barcelona is a platform of tech orientated jobs in Barcelona
+Jobs in Barcelona is a platform of tech orientated jobs in Barcelona.
 <p align="center">
   <img src="./img/jobsinbarca_1.png" alt="browse_by_tech"
-       width="500" height="350">
+       width="500" height="300">
 </p>
 
-the `jobsinbarcelona.py` script scrapes all of the job listings along with the company, location, release date, source and url.
+The `jobsinbarcelona.py` script scrapes all of the job listings along with the company, location, published date, job source and URL.
 
 <p align="center">
   <img src="./img/jobsinbarca_2.png" alt="browse_by_tech"
-       width="500" height="350">
+       width="500" height="330">
 </p>
 
 ### **[Datacamp Instructors](https://www.datacamp.com/instructors):** 
-On the datacamp instructors page, you can find the details of all of the course instructors. 
+On the datacamp instructors page, you can find the details of all of the various course instructors. 
 <p align="center">
   <img src="./img/data_instruct_1.png" alt="browse_by_tech"
-       width="500" height="350">
+       width="500" height="330">
 </p>
 
-the `datacamp_instruct.py` script extracts all of the instructors titles along with their subscriber count,  occupation and url. Furthmore, within their full bios their personal descriptions are extracted.
+The `datacamp_instruct.py` script extracts all of the instructor's titles along with their subscriber count,  occupation and URL. Furthermore, the script extracts their personal descriptions from their "Full Bios" (see example below). 
 
 <p align="center">
   <img src="./img/data_instruct_2.png" alt="browse_by_tech"
@@ -54,7 +54,7 @@ the `datacamp_instruct.py` script extracts all of the instructors titles along w
 - **jobsinbarcelona**: Scrapy jobsinbarcelona project stored here
 - **datacamp_instructors**: Scrapy datacamp instructors project stored here
 
-Each of which are a directory with the following contents (datacamp used for example):
+Each of which is a directory with the following contents (datacamp used for example):
 ```
 datacamp/
     scrapy.cfg            # deploy configuration file
@@ -93,7 +93,7 @@ pip install scrapy
 
 ## How to run the Spiders
 
-To put the spiders to work, go to the relevent project’s top level directory (i.e datacamp or jobsinbarcelona) and run:
+To put the spiders to work, go to the relevant project’s top-level directory (i.e. datacamp, jobsinbarcelona or datacamp_instructors) and run:
 ```bash
 scrapy crawl datacamp
 ```
@@ -128,4 +128,4 @@ You can also use other formats, like JSON:
 scrapy crawl datacamp -o datacamp.json
 ```
 
-Note: for historic reasons, Scrapy appends to a given file instead of overwriting its contents. If you run this command twice without removing the file before the second time, you’ll end up with a broken file. 
+Note: for historical reasons, Scrapy appends to a given file instead of overwriting its contents. If you run this command twice without removing the file before the second time, you’ll end up with a broken file. 
