@@ -1,13 +1,59 @@
 # 14D004 Scraping Project
 
+## Project Description
+
 The data and code in this repository allows users to scrape all the avalible courses on [datacamp.com](https://www.datacamp.com/courses) and scape all job posts on [jobsinbarcelona.es](http://jobsinbarcelona.es/) using [scrapy](https://scrapy.org/) an open source and collaborative framework for extracting the data you need from websites.
+
+### **[Datacamp](https://www.datacamp.com/courses):** 
+On the datacamp course page itself, you can search for courses of interest or browse by technology. 
+<p align="center">
+  <img src="./img/datacamp_1.png" alt="browse_by_tech"
+       width="500" height="350">
+</p>
+
+the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url. 
+
+<p align="center">
+  <img src="./img/datacamp_2.png" alt="browse_by_tech"
+       width="500" height="350">
+</p>
+
+### **[Jobs in barcelona](http://jobsinbarcelona.es/):** 
+On the datacamp course page itself, you can search for courses of interest or browse by technology. 
+<p align="center">
+  <img src="./img/jobsinbarca_1.png" alt="browse_by_tech"
+       width="500" height="350">
+</p>
+
+the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url.
+
+<p align="center">
+  <img src="./img/jobsinbarca_2.png" alt="browse_by_tech"
+       width="500" height="350">
+</p>
+
+### **[Datacamp Instructors](https://www.datacamp.com/instructors):** 
+On the datacamp course page itself, you can search for courses of interest or browse by technology. 
+<p align="center">
+  <img src="./img/data_instruct_1.png" alt="browse_by_tech"
+       width="500" height="350">
+</p>
+
+the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url. 
+
+<p align="center">
+  <img src="./img/data_instruct_2.png" alt="browse_by_tech"
+       width="550" height="160">
+</p>
+
 
 - Code was written Python 3.6 and Scrapy 1.5.1
 
-## Description of folders
+## Folders 
 
 - **datacamp**: Scrapy datacamp project stored here
 - **jobsinbarcelona**: Scrapy jobsinbarcelona project stored here
+- **datacamp_instructors**: Scrapy datacamp instructors project stored here
 
 Each of which are a directory with the following contents (datacamp used for example):
 ```
@@ -56,6 +102,10 @@ or
 ```bash
 scrapy crawl jobsinbarcelona
 ```
+or
+```bash
+scrapy crawl datacamp_instructors
+```
 
 ## Storing the scraped data
 
@@ -67,7 +117,12 @@ or
 ```bash
 scrapy crawl jobsinbarcelona -o jobsinbarcelona.csv
 ```
-That will generate a datacamp.csv and jobsinbarcelona.csv file containing all scraped items. 
+or
+```bash
+scrapy crawl datacamp_instruct -o datacamp_instructors.csv
+```
+
+That will generate a datacamp.csv, jobsinbarcelona.csv and datacamp_instructors.csv file containing all the scraped items. 
 
 You can also use other formats, like JSON:
 ```bash
