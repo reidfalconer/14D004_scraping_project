@@ -4,11 +4,13 @@
 
 The data and code in this repository allows users to scrape all the avalible courses on [datacamp.com](https://www.datacamp.com/courses) and scape all job posts on [jobsinbarcelona.es](http://jobsinbarcelona.es/) using [scrapy](https://scrapy.org/) an open source and collaborative framework for extracting the data you need from websites.
 
+- Code was written Python 3.6 and Scrapy 1.5.1
+
 ### **[Datacamp](https://www.datacamp.com/courses):** 
 On the datacamp course page itself, you can search for courses of interest or browse by technology. 
 <p align="center">
   <img src="./img/datacamp_1.png" alt="browse_by_tech"
-       width="500" height="350">
+       width="500" height="330">
 </p>
 
 the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url. 
@@ -19,13 +21,13 @@ the `datacamp.py` script extracts all of the course titles within these six thec
 </p>
 
 ### **[Jobs in barcelona](http://jobsinbarcelona.es/):** 
-On the datacamp course page itself, you can search for courses of interest or browse by technology. 
+Jobs in Barcelona is a platform of tech orientated jobs in Barcelona
 <p align="center">
   <img src="./img/jobsinbarca_1.png" alt="browse_by_tech"
        width="500" height="350">
 </p>
 
-the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url.
+the `jobsinbarcelona.py` script scrapes all of the job listings along with the company, location, release date, source and url.
 
 <p align="center">
   <img src="./img/jobsinbarca_2.png" alt="browse_by_tech"
@@ -33,21 +35,18 @@ the `datacamp.py` script extracts all of the course titles within these six thec
 </p>
 
 ### **[Datacamp Instructors](https://www.datacamp.com/instructors):** 
-On the datacamp course page itself, you can search for courses of interest or browse by technology. 
+On the datacamp instructors page, you can find the details of all of the course instructors. 
 <p align="center">
   <img src="./img/data_instruct_1.png" alt="browse_by_tech"
        width="500" height="350">
 </p>
 
-the `datacamp.py` script extracts all of the course titles within these six thechnologies, along with their course description, author, authors occupation and url. 
+the `datacamp_instruct.py` script extracts all of the instructors titles along with their subscriber count,  occupation and url. Furthmore, within their full bios their personal descriptions are extracted.
 
 <p align="center">
   <img src="./img/data_instruct_2.png" alt="browse_by_tech"
        width="550" height="160">
 </p>
-
-
-- Code was written Python 3.6 and Scrapy 1.5.1
 
 ## Folders 
 
